@@ -12,8 +12,8 @@ for (i = 0; i < 9; i++)
 for (ch = 0; ch < 15; ch++)
 {
 if (ch > 9)
-_putchar((ch / 10) + 48);
-_putchar((ch % 10) + 48);
+_putchar(ch / 10 + '0');
+_putchar(ch % 10 + '0');
 }
 _putchar('\n');
 }

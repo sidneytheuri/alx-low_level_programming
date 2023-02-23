@@ -1,20 +1,37 @@
 #include "main.h"
+#include <stdio.h>
 /**
-* print_square - prints hashes squares.
-* @size: size of the square.
-* Return: no return.
+* main - Fizz Buzz code
+*
+* Return: void
 */
-void print_square(int size)
+int main(void)
 {
-int i, j;
-for (i = 0; i < size; i++)
+int i = 1;
+while (i <= 100)
 {
-for (j = 0; j < size; j++)
+if (i % 3 == 0 && i % 5 == 0)
 {
-_putchar(35);
+printf("FizzBuzz");
 }
-if (i != size - 1)
-_putchar('\n');
+else if (i % 3 == 0)
+{
+printf("Fizz");
 }
-_putchar('\n');
+else if (i % 5 == 0)
+{
+printf("Buzz");
+}
+else
+{
+printf("%i", i);
+}
+if (i != 100)
+{
+putchar(' ');
+}
+i++;
+}
+putchar('\n');
+return (0);
 }

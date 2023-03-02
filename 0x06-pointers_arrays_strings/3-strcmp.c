@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*_strcmp - compress strings 
+*_strcmp - compress strings
 *@s1: A pointer
 *@s2: A pointer
 *Return: dest

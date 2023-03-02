@@ -2,7 +2,7 @@
 /**
 *_strncpy - makes copy of string
 *@dest: A character pointer
-*@src: Apointer to character 
+*@src: Apointer to character
 *@n: number
 *Return: dest
 */

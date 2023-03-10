@@ -24,4 +24,5 @@ add += atoi(argv[i]);
 printf("%d\n", add);
 return (0);
 }
+}
 

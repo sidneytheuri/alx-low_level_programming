@@ -19,10 +19,10 @@ if (!isdigit(argv[i][j]))
 printf("Error\n");
 return (1);
 }
+}
 add += atoi(argv[i]);
 }
 printf("%d\n", add);
 return (0);
-}
 }
 

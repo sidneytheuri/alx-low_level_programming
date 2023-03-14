@@ -13,23 +13,26 @@
 
 char *_strdup(char *str)
 {
-	int i = 0, j, k = 0;
-	char *newStr = NULL;
+	char *dup;
+	unsigned int i, len;
 
-	while (str[k] != '\0')
-	{
-		i++;
-		k++;
-	}
-
-	newStr = malloc(sizeof(char) * (i + 1));
+	i = 0;
+	len = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	for (j = 0; j <= i; j++)
-		newStr[j] = str[j];
+	while (str[len])
+		len++;
 
-	return (newStr);
+	dup = malloc(sizeof(char) * (len + 1));
+
+	if (dup == NULL)
+		return (NULL);
+
+	while ((dup[i] = str[i]) != '\0')
+		i++;
+
+	return (dup);
 }
 

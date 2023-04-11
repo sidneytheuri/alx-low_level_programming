@@ -6,9 +6,9 @@
 * @file_to: file
 * @file_from: source file
 * @argv: argument
-* Return: no return
+* Return: NULL return
 */
-void file_error(int file_to, int file_from, char *argv[])
+void file_error(int file_from, int file_to, char *argv[])
 {
 if (file_from == -1)
 	{
@@ -45,7 +45,6 @@ exit(97);
 file_from = open(argv[1], O_RDONLY);
 file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 file_error(file_from, file_to, argv);
-
 tchar = 1024;
 while (tchar == 1024)
 {
@@ -56,21 +55,16 @@ while (tchar == 1024)
 	if (ist == -1)
 		file_error(0, -1, argv);
 }
-
 close_error = close(file_from);
 if (close_error == -1)
 {
-
-
-	dprintf(STDERR_FILENO, "Error: cannot close t %d\n", file_from);
+dprintf(STDERR_FILENO, "Error: cannot close t %d\n", file_from);
 	exit(100);
 }
-
-
 close_error = close(file_to);
 if (close_error == -1)
 {
-	dprintf(STDERR_FILENO, "Error: not able to close t %d\n", file_from);
+dprintf(STDERR_FILENO, "Error: not able to close t %d\n", file_from);
 	exit(100);
 }
 return (0);

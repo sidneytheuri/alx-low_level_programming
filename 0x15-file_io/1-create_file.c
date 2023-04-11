@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * create_file -  generates file
- *@text_content: the info in file
- *@filename: name of file
- *Retrun: 1 if success and -1 on fail
+ * @text_content: the info in file
+ * @filename: name of file
+ * Return: 1 if success and -1 on fails on create_file
  */
 
 

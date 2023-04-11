@@ -16,7 +16,7 @@ if (index > 63)
 
 o = 1 << index;
 if (*n & o)
-	*n = o;
+	*n ^= o;
 return (1);
 }
 

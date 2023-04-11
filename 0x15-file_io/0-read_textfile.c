@@ -17,7 +17,7 @@ char *buffer;
 
 
 
-if (filename == NULL)
+if (!filename)
 	return (0);
 t = open(filename, O_RDONLY);
 
